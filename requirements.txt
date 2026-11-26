@@ -1,0 +1,5 @@
+# OpenCV (cv2) ist unter JetPack 6 vorinstalliert. Nicht per pip nachinstallieren,
+# sonst droht ein Konflikt mit der NVIDIA-Version.
+numpy
+smbus2
+matplotlib   # nur für src/plot_messung.py, läuft auch auf dem PC

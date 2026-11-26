@@ -1,0 +1,38 @@
+Druckbare Servohörner für SG90 (LYMISPIYA, Metallgetriebe) und den Pan-Tilt "Mini Pan Tilt - Servo G9"
+Stand 18.11.2026
+
+INHALT
+- spline_testplatte.stl      Zuerst drucken. 10 Naben ohne Arm.
+                             Obere Reihe (Steg mit Kerben) = SG90 (NoName, 4,9 mm)
+                             Untere Reihe = SG90TP (Tower Pro, 4,7 mm)
+                             Spalt von links nach rechts: 0,00 / 0,05 / 0,10 / 0,15 / 0,20 mm
+                             (Anzahl Kerben im oberen Steg = Spalte 1 bis 5)
+- horn_SG90_einarm.stl       22 x 7 mm, für die Tapa (Tilt-Achse)
+- horn_SG90_kreuz.stl        35 x 18 mm, für die Plataforma (Pan-Achse)
+- horn_SG90_doppel.stl       35 x 7 mm, Reserve
+- horn_SG90TP_*.stl          dieselben Hörner mit der kleineren Tower-Pro-Verzahnung
+- hoerner_original_form.scad Quelle. Parameter preset, gap, form, arm_t oben in der Datei.
+- testplatte.scad            Quelle der Testplatte
+
+ABLAUF
+1. Testplatte drucken: PLA, 0,4-mm-Düse, Schicht 0,1 mm (oder kleiner), 100 % Infill, keine Stützen,
+   so liegen lassen wie in der Datei (Verzahnung oben offen).
+2. Jede Nabe auf die Servowelle drücken. Gesucht: die engste Nabe, die mit festem Druck ganz aufgeht
+   und sich nicht von Hand verdrehen lässt.
+3. Hörner mit dieser Verzahnung nehmen. Liegt der beste Spalt nicht bei 0,10 mm, die .scad in OpenSCAD
+   öffnen, gap und preset ändern, F6, als STL exportieren.
+4. Hörner gleich drucken wie die Testplatte. Mit der kurzen Originalschraube (5 mm) sichern.
+
+HINWEISE
+- Gedruckte Verzahnung (21 Zähne auf ca. 4,9 mm, Zahnteilung ca. 0,73 mm) liegt an der Grenze einer
+  0,4-mm-Düse. Bei Last nutzt PLA schneller ab als das Originalhorn. Für den Kameraträger reicht es
+  wahrscheinlich, das ist aber nicht getestet.
+- Außenmaße entsprechen den Originalhörnern laut Produktbild. Armdicke 1,6 mm und Nabenhöhe 4,2 mm
+  sind Annahmen. Vor dem Einbau mit der Tasche in Plataforma und Tapa vergleichen.
+
+QUELLEN UND LIZENZEN
+- Verzahnungsmodell: mezger, "customizable servo arm", Thingiverse thing:6853010,
+  https://github.com/mezger/customizable-servo-arm (LGPL-2.1).
+  Die Datei hoerner_original_form.scad bindet dieses Modell per "use" ein. Zum Neu-Erzeugen das Repo
+  klonen und den Pfad in der .scad anpassen.
+- Pan-Tilt: fbuenonet, "Mini Pan Tilt - Servo G9", Thingiverse thing:708819 (CC BY-SA).

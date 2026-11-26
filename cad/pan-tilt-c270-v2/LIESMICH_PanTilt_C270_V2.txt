@@ -1,0 +1,48 @@
+Pan-Tilt V2 für SG90 (LYMISPIYA, Metallgetriebe), gedruckte Hörner und Logitech C270
+Stand 18.11.2026
+
+DRUCKDATEIEN
+- Druckplatte_A_Halterung_0.2mm.3mf     Tapa_V2, Plataforma_V2, Kameraplatte_C270_V2
+    PLA, 0,2 mm Schicht, 3 Perimeter, 20 bis 30 % Infill, keine Stützen.
+- Druckplatte_B_Hoerner_Test_0.1mm.3mf  Spline-Testplatte und Hörner (SG90 und SG90TP)
+    PLA, 0,1 mm Schicht, 100 % Infill, keine Stützen. Zuerst die Testplatte prüfen,
+    dann nur die passende Hörner-Variante behalten.
+- Einzelteile als STL im selben Ordner.
+- PanTilt_C270_V2.f3d                    Fusion-Archiv mit allen Teilen (Mesh-Körper) in Druckausrichtung.
+
+ÄNDERUNGEN GEGENÜBER DEM ORIGINAL (fbuenonet)
+- Plataforma: Kreuztasche um 0,75 mm je Seite vergrößert und um die Wellenmitte (x = 16,5 mm)
+  gespiegelt ergänzt. Passt jetzt für das Originalhorn und das gedruckte Kreuzhorn (35 x 18 mm),
+  geprüft mit mind. 0,23 mm Spiel.
+- Tapa: Ausnehmung für das Einarmhorn auf 22,5 mm verlängert, Nabenloch 7,6 mm. Gedrucktes
+  Einarmhorn (22 x 7 mm) passt mit mind. 0,20 mm Spiel.
+- Kameraplatte: Abstand zwischen den Servo-Pfosten 23,0 -> 23,5 mm (Servo 23 mm).
+  Neu: Gelenkgabel für die C270 an der Plattenkante (Breite 27 mm, Spalt 7,4 mm, Bohrung 3,3 mm,
+  Achse 7 mm vor der Kante).
+
+C270 MONTIEREN (Gelenkgabel)
+1. Am Klappfuß der C270 die Gummikappen abziehen, Schraube und Stift herausnehmen, Fuß abnehmen.
+2. Die Gelenkzunge der Kamera in den 7,4-mm-Spalt der Gabel schieben.
+3. M3-Schraube ca. 30 mm durchstecken, mit Mutter (am besten Stoppmutter) so anziehen,
+   dass sich die Kamera nur mit Kraft drehen lässt.
+4. Kamera so ausrichten, dass sie geradeaus schaut, wenn der Tilt-Servo auf 90 Grad steht.
+Vorteil: Die Kamera sitzt in ihrem eigenen Gelenk, ohne Klebeband. Ihr Neigungswinkel lässt sich
+von Hand voreinstellen. Gelenkachse und Kippachse liegen parallel.
+
+MONTAGE ALLGEMEIN
+- Servos vor dem Aufstecken der Hörner auf 90 Grad stellen.
+- Kreuzhorn in die Plataforma, Einarmhorn in die Tapa. Mit der kurzen Servoschraube (5 mm) sichern.
+- Die Nabe der gedruckten Hörner ist 4,2 mm hoch, die Tasche in der Plataforma 3,1 mm tief.
+  Die Nabe steht also ca. 1,1 mm über und zeigt zum Servo.
+
+OFFEN / ANNAHMEN
+- Ob die gedruckte Verzahnung hält, zeigt erst die Testplatte.
+- Der Kippbereich ist durch die Gabel auf ihrer Seite etwas kleiner (ca. 16 Grad, geschätzt).
+- Kippmoment mit C270: ca. 0,02 N·m bei ca. 0,18 N·m Servo-Haltemoment (Annahme), also ca. 1/8.
+
+QUELLEN UND LIZENZEN
+- Pan-Tilt: fbuenonet, "Mini Pan Tilt - Servo G9", Thingiverse thing:708819 (CC BY-SA).
+  Diese Anpassung steht ebenfalls unter CC BY-SA.
+- C270-Gelenkmaße: adamoell, "Logitech C270 Tripod Mount", Thingiverse thing:4233794 (CC BY).
+- Hörner-Verzahnung: mezger, "customizable servo arm", github.com/mezger/customizable-servo-arm (LGPL-2.1).
+- Erzeugt mit v2_bauen.py (Python, trimesh, manifold3d) und hoerner_original_form.scad (OpenSCAD).
