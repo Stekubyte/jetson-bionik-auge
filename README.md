@@ -23,7 +23,7 @@ Eine Pan-Tilt-Kamera folgt einem farbigen Ball. Sie bewegt sich dabei nach dem V
 
 ## Bionischer Ansatz
 
-Das Projekt folgt dem Vorgehen der Bionik nach VDI 6220: Vorbild verstehen, Prinzip abstrahieren, technisch umsetzen, mit dem Vorbild vergleichen.
+Das Projekt folgt dem Vorgehen der Bionik: Vorbild verstehen, Prinzip abstrahieren, technisch umsetzen, mit dem Vorbild vergleichen.
 
 | Menschliches Auge | Umsetzung im Projekt |
 |---|---|
